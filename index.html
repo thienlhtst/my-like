@@ -243,8 +243,14 @@
         background-size: 100% var(--lh);
         background-position: 0 0;
         background-repeat: repeat;
-      }
+        scrollbar-width: none; 
 
+  /* 3. Ẩn scrollbar trên Internet Explorer và Edge cũ */
+  -ms-overflow-style: none;
+      }
+.ruled::-webkit-scrollbar {
+  display: none;
+}
       .ruled p {
         margin: 0 0 8px;
       }
@@ -376,7 +382,7 @@
       }
 
       .btn-cancel::after {
-        content: "Em chắc chưa huhu 🥺";
+        content: "TA chắc chưa huhu 🥺";
         position: absolute;
         left: 50%;
         top: -40px;
@@ -424,10 +430,10 @@
       <!-- TRANG TRÁI: NỘI DUNG LÁ THƯ -->
       <div class="page left">
         <div class="ruled letter-left-inner">
-          <p class="salute">Dear <span id="ten">Quỳnh Như</span>,</p>
+          <p class="salute">Dear <span id="ten">Trâm Anh</span>,</p>
           <p class="content">
-            Chúng ta mới quen nhau chưa lâu, nhưng anh cảm thấy thật sự muốn có cơ hội gặp em ngoài đời. Vậy nên anh viết lá thư nhỏ này để mời em một buổi hẹn đầu tiên vào <strong>Chủ nhật, ngày 07/09/2025</strong>. Anh hy vọng em sẽ dành thời gian để chúng ta có thể trò chuyện nhiều hơn và hiểu nhau hơn.
-          Mong rằng em sẽ đồng ý để ngày hôm đó trở thành một ngày để nhớ cho cả hai.
+            Chúng ta mới quen nhau cũng lâu, nhưng Thiện thấy chưa có dịp nào để mình thật sự ở sài gòn mà hẹn nhau, nên Thiện muốn mời Trâm Anh vào ngày <strong>Thứ bảy, ngày 03/01/2026</strong>.
+          Mong rằng Thiện có thể biết nhiều hơn về Trâm Anh hơn.
           </p>
         </div>
       </div>
@@ -442,24 +448,23 @@
             <h2 class="plan-title">Kế hoạch</h2>
 
             <div class="plan-block">
-              <div class="plan-head">- Kế hoạch 1 (tổng cộng 4h15)</div>
+              <div class="plan-head">- Kế hoạch 1 (chơi chiềuu)</div>
               <ul>
-                <li>đi xem phim (2h)</li>
-                <li>đi ăn (1h15)</li>
-                <li>đi dạo công viên (1h)</li>
+                <li>đi cà hê</li>
+                <li>đi ăn </li>
+                <li>đi dạo </li>
               </ul>
             </div>
 
             <div class="plan-block">
-              <div class="plan-head">- Kế hoạch 2 (tổng cộng 4h15)</div>
+              <div class="plan-head">- Kế hoạch 2 (chơi tốiiii)</div>
               <ul>
-                <li>đi ăn (1h15)</li>
-                <li>đi dạo công viên (1h)</li>
-                <li>đi xem phim (2h)</li>
+                <li>đi ăn </li>
+                <li>đi dạo</li>
               </ul>
             </div>
 
-            <fieldset class="group">
+            <!-- <fieldset class="group">
               <legend>Chọn cách di chuyển</legend>
               <div class="radio-row">
                 <label
@@ -471,7 +476,7 @@
                   cho tiện</label
                 >
               </div>
-            </fieldset>
+            </fieldset> -->
 
             <fieldset class="group">
               <legend>Chọn kế hoạch</legend>
@@ -493,7 +498,7 @@
                 <input
                   type="text"
                   name="plan3_text"
-                  placeholder="Mô tả kế hoạch 3 (em muốn đi đâu / làm gì?)"
+                  placeholder="Mô tả kế hoạch 3 (TA muốn đi đâu / làm gì?)"
                 />
               </div>
             </fieldset>
@@ -501,7 +506,7 @@
             <div class="actions">
               <button type="submit" value="accept">Gửi trả lời 💌</button>
               <button type="submit" value="decline" class="btn-cancel">
-                Thôi em không đi đâu
+                Thôi TA không đi đâu
               </button>
             </div>
           </form>
@@ -790,7 +795,7 @@ ${plan === "3" ? "- Ghi chú Kế hoạch 3: " + extra : ""}`;
                 alert("Có lỗi khi gửi email, vui lòng thử lại.");
               });
           } else if (action === "decline") {
-            alert("Em không đi... 😢 Em chắc chưa đó huhu 🥺");
+            alert("TA không đi... 😢 TA chắc chưa đó huhu 🥺");
           }
         });
       })();

@@ -231,9 +231,11 @@
         padding: calc(var(--lh) * 1) 26px calc(var(--lh) * 1) 26px;
         /* cân theo --lh */
         line-height: var(--lh);
-        overflow: auto;
         background-color: #fff;
-
+overflow-y: auto; 
+  
+  /* 2. Giúp cuộn mượt trên iPhone/iPad */
+  -webkit-overflow-scrolling: touch;
         /* CHỈ vạch ngang */
         background-image: linear-gradient(
           180deg,
